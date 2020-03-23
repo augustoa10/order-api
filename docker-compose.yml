@@ -1,0 +1,28 @@
+version: "3.0"
+
+services:
+  postgres:
+    image: postgres:9.6
+    environment:
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    environment:
+      RACK_ENV: development
+      RAILS_ENV: development
+      RAILS_SERVE_STATIC_FILES: "true"
+    volumes:
+      - ./:/app
+      - gems:/usr/local/bundle
+    ports:
+      - 3000:3000
+    depends_on:
+      - postgres
+    command: bash -c "rails s -p 3000 -b 0.0.0.0"
+
+volumes:
+  db_data:
+  gems:
