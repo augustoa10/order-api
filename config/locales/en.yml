@@ -31,3 +31,12 @@
 
 en:
   hello: "Hello world"
+  errors:
+    messages:
+      create_user_error: "User create error: %{message}"
+      update_user_error: "User update error: %{message}"
+      not_found_user_error: "User not found error: %{message}"
+  activerecord:
+    errors:
+      messages:
+        cpf: "Invalid CPF"

@@ -1,0 +1,13 @@
+inherit_gem:
+  rubocop-rails:
+    - config/rails.yml
+
+AllCops:
+  Exclude:
+    - 'bin/*'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/IndentationConsistency:
+   EnforcedStyle: normal
