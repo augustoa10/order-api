@@ -166,6 +166,7 @@ GEM
       rspec-support (~> 3.9.0)
     rspec-support (3.9.2)
     ruby_dep (1.5.0)
+    seed_migration (1.2.3)
     simplecov (0.18.5)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -216,6 +217,7 @@ DEPENDENCIES
   rails (~> 6.0.2.1)
   rspec-its
   rspec-rails
+  seed_migration
   simplecov
   spring
   spring-watcher-listen (~> 2.0.0)

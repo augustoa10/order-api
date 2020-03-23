@@ -16,6 +16,9 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# A data migration library, similar to rails built-in schema migration.
+gem 'seed_migration'
+
 group :development, :test do
   gem "pry-rails"
   gem "pry-remote"
