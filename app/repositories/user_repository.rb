@@ -46,17 +46,6 @@ class UserRepository
     raise NotFoundError, "User with id '#{id}' not found."
   end
 
-  # @param email [String]
-  #
-  # @return [User]
-  #
-  # @raise [UserRepository::NotFoundError]
-  def find_by_email(email)
-    scope.find_by! email: email
-  rescue ActiveRecord::RecordNotFound
-    raise NotFoundError, "User with email '#{email}' not found."
-  end
-
   def list
     scope.all
   end

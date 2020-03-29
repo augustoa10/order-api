@@ -33,10 +33,22 @@ en:
   hello: "Hello world"
   errors:
     messages:
-      create_user_error: "User create error: %{message}"
-      update_user_error: "User update error: %{message}"
-      not_found_user_error: "User not found error: %{message}"
+      user:
+        create_user_error: "User create error: %{message}"
+        update_user_error: "User update error: %{message}"
+        not_found_user_error: "User not found error: %{message}"
+      plan:
+        create_plan_error: "Plan create error: %{message}"
+        update_plan_error: "Plan update error: %{message}"
+        not_found_plan_error: "Plan not found error: %{message}"
+      order:
+        create_order_error: "Order create error: %{message}"
+        update_order_error: "Order update error: %{message}"
+        not_found_order_error: "Order not found error: %{message}"
+      device:
+        list_device_error: "List device error: %{message}"
   activerecord:
     errors:
       messages:
         cpf: "Invalid CPF"
+        device_imei: "Invalid IMEI"

@@ -19,7 +19,7 @@ class UserService
   def create(name:, cpf:, email:)
     user_repository.create(name: name, cpf: cpf, email: email)
   rescue UserRepository::CreateError => e
-    raise CreateError, I18n.t("errors.messages.create_user_error", message: e.message)
+    raise CreateError, I18n.t("errors.messages.plan.create_user_error", message: e.message)
   end
 
   # @param id [Integer]
@@ -29,9 +29,9 @@ class UserService
   def update(id:, **kwargs)
     user_repository.update(id: id, **kwargs)
   rescue UserRepository::NotFoundError => e
-    raise NotFoundError, I18n.t("errors.messages.not_found_user_error", message: e.message)
+    raise NotFoundError, I18n.t("errors.messages.plan.not_found_user_error", message: e.message)
   rescue UserRepository::UpdateError => e
-    raise UpdateError, I18n.t("errors.messages.update_user_error", message: e.message)
+    raise UpdateError, I18n.t("errors.messages.plan.update_user_error", message: e.message)
   end
 
   # @param id [Integer]
@@ -40,7 +40,7 @@ class UserService
   def destroy(id:)
     user_repository.destroy(id: id)
   rescue UserRepository::NotFoundError => e
-    raise NotFoundError, I18n.t("errors.messages.not_found_user_error", message: e.message)
+    raise NotFoundError, I18n.t("errors.messages.plan.not_found_user_error", message: e.message)
   end
 
   # @param id [Integer]
@@ -49,13 +49,13 @@ class UserService
   def find(id:)
     user_repository.find_by_id(id)
   rescue UserRepository::NotFoundError => e
-    raise NotFoundError, I18n.t("errors.messages.not_found_user_error", message: e.message)
+    raise NotFoundError, I18n.t("errors.messages.plan.not_found_user_error", message: e.message)
   end
 
   # @return [User]
   def list
     user_repository.list
   rescue UserRepository::NotFoundError => e
-    raise NotFoundError, I18n.t("errors.messages.not_found_user_error", message: e.message)
+    raise NotFoundError, I18n.t("errors.messages.plan.not_found_user_error", message: e.message)
   end
 end
