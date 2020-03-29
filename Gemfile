@@ -22,6 +22,13 @@ gem "seed_migration"
 # CPF & CNPJ generator, validator & formatter
 gem "cpf_cnpj"
 
+# HTTP client library that provides a common interface over many adapters
+gem "faraday", "~> 0.13.1"
+gem "faraday_middleware", "~> 0.12.2"
+
+# Attributes for Plain Old Ruby Objects
+gem "virtus"
+
 group :development, :test do
   gem "pry-rails"
   gem "pry-remote"
