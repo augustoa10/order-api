@@ -23,8 +23,8 @@ gem "seed_migration"
 gem "cpf_cnpj"
 
 # HTTP client library that provides a common interface over many adapters
-gem "faraday", "~> 0.13.1"
-gem "faraday_middleware", "~> 0.12.2"
+gem "faraday", "~> 0.17.3"
+gem "faraday_middleware", "~> 0.14.0"
 
 # Attributes for Plain Old Ruby Objects
 gem "virtus"
@@ -50,6 +50,7 @@ group :test do
   gem "rspec-its"
   gem "rspec-rails"
   gem "simplecov", require: false
+  gem "webmock", "~> 3.4"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

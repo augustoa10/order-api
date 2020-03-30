@@ -61,7 +61,7 @@ class OrderService
 
     order_repository.update(id: id, **kwargs)
   rescue UserRepository::NotFoundError, PlanRepository::NotFoundError => e
-    raise CreateOrderError, I18n.t("errors.messages.order.update_order_error", message: e.message)
+    raise UpdateError, I18n.t("errors.messages.order.update_order_error", message: e.message)
   rescue OrderRepository::NotFoundError => e
     raise NotFoundError, I18n.t("errors.messages.order.not_found_order_error", message: e.message)
   rescue OrderRepository::UpdateError => e
@@ -89,7 +89,5 @@ class OrderService
   # @return [Plan]
   def list
     order_repository.list
-  rescue PlanRepository::NotFoundError => e
-    raise NotFoundError, I18n.t("errors.messages.order.not_found_order_error", message: e.message)
   end
 end

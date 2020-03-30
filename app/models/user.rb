@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :orders
+
   validates :cpf, presence: true,
                   uniqueness: true,
                   length: { maximum: 11 }

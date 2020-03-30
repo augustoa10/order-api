@@ -55,7 +55,5 @@ class UserService
   # @return [User]
   def list
     user_repository.list
-  rescue UserRepository::NotFoundError => e
-    raise NotFoundError, I18n.t("errors.messages.plan.not_found_user_error", message: e.message)
   end
 end

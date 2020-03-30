@@ -55,7 +55,5 @@ class PlanService
   # @return [Plan]
   def list
     plan_repository.list
-  rescue PlanRepository::NotFoundError => e
-    raise NotFoundError, I18n.t("errors.messages.plan.not_found_plan_error", message: e.message)
   end
 end
